@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>gesture Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container"> 
+
+    <center>
+        <h2> Hand Gesture Recognition 👍👌✌️ </h2>
+        <p> Take a selfie of your hand gesture to know about its significance! </p>
+        <p> To be noted: The model is trained to recognize - 👍👌✌️ only </p>
+        <br>
+        <br>
+        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-10">
+            <label> Webcam view - </label>
+            <div id="camera"></div>
+            <br>
+            <br>
+            <button class="btn btn-danger" onclick="Take_snapshot()"> Capture Image </button>
+        </div>
+        
+        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-10">
+            <label> Prediction - </label>
+            <p id="result_object"></p>
+            <p id="result_icon"></p>
+        </div>
+
+        <div class="col-lg-4 col-sm-4 col-md-4 col-xs-10">
+            <label> Snapshot - </label>
+            <div id="result"></div>
+            <br>
+            <br>
+            <button class="btn btn-danger" onclick="check()"> Check </button>
+        </div>
+
+
+    </center>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
